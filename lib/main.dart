@@ -985,9 +985,9 @@ say "انتهى البرنامج"
         }
       }
 
-      for (final result in _runtime.results) {
-        _appendOutput(result.toString());
-      }
+      _runtime.results.forEach((key, value) {
+        _appendOutput('$key: $value');
+        });
 
       if (_runtime.results.isEmpty && _output.trim().isEmpty) {
         _appendOutput('تم التنفيذ دون نتائج ظاهرة.');
